@@ -1,0 +1,20 @@
+<div class="card my-3">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item" (click)="showExample = true">
+                <span class="nav-link" [class.active]="showExample">Example</span>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link" [class.active]="!showExample" (click)="showExample = false">API</span>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <div *ngIf="showExample">
+            <ng-container *ngTemplateOutlet="example"></ng-container>
+        </div>
+        <div *ngIf="!showExample">
+            <ng-container *ngTemplateOutlet="api"></ng-container>
+        </div>
+    </div>
+</div>

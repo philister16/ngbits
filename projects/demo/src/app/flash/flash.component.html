@@ -1,0 +1,66 @@
+<h1>Flash</h1>
+<p>This bit displays flash messages (also called snackbars or toasts) from only a service. There is no need to place a
+    component in your views.
+</p>
+<div class="alert alert-info">You need to import <code>BrowserAnimationsModule</code> in your root module!</div>
+<section class="py-3">
+    <h3>Examples</h3>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Vertical</label>
+                <select class="form-control" [(ngModel)]="flashConfig.vertical">
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Horizontal</label>
+                <select class="form-control" [(ngModel)]="flashConfig.horizontal">
+                    <option value="left">Left</option>
+                    <option value="center">Center</option>
+                    <option value="right">Right</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Delay</label>
+                <input type="number" class="form-control" [(ngModel)]="flashConfig.delay">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Offset</label>
+                <input type="text" class="form-control" [(ngModel)]="flashConfig.offset">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>CSS classes</label>
+                <input type="text" class="form-control" [(ngModel)]="flashConfig.className">
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary mr-2" (click)="launchFlash('custom')">Launch flash message</button>
+    <pre class="my-3"><code [highlight]="flashExample1" [languages]="['typescript']"></code></pre>
+    <p>For convenience the service also provides contextual methods which by default are styled with bootstrap's
+        alert
+        classes. The css classes can be overriden just like with custom flash messages, however.</p>
+    <button class="btn btn-success mr-2" (click)="launchFlash('success')">Success</button>
+    <button class="btn btn-danger mr-2" (click)="launchFlash('danger')">Error</button>
+    <button class="btn btn-warning mr-2" (click)="launchFlash('warning')">Warning</button>
+    <button class="btn btn-info mr-2" (click)="launchFlash('info')">Info</button>
+    <pre class="my-3"><code [highlight]="flashExample2" [languages]="['typescript']"></code></pre>
+</section>
+<section class="py-3">
+    <h3>API</h3>
+    <h5>NgbitFlashModule <span class="badge badge-dark">Module</span></h5>
+    <hr>
+    <h5>NgbitFlashService <span class="badge badge-primary">Service</span></h5>
+    <app-api-table [tableValues]="serviceAPI"></app-api-table>
+    <h5>NgbitFlashConfig <span class="badge badge-secondary">Interface</span></h5>
+    <app-api-table [tableValues]="configAPI"></app-api-table>
+</section>

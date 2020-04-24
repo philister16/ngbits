@@ -1,0 +1,64 @@
+<h1>Loading button</h1>
+<p>Button components that can change between text and a loading indicator while preserving the initial size.</p>
+<section class="py-3">
+    <h3>Examples</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Loader</label>
+                <input type="text" class="form-control" readonly [(ngModel)]="config.loader">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Button class</label>
+                <input type="text" class="form-control" [(ngModel)]="config.btnClass">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Button type</label>
+                <select class="form-control" [(ngModel)]="config.btnType">
+                    <option value="button">Button</option>
+                    <option value="submit">Submit</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Loader color</label>
+                <input type="text" class="form-control" [(ngModel)]="config.loaderColor">
+            </div>
+        </div>
+    </div>
+    <lib-ngbit-dots-loading-button [loader]="this.config.loader" [btnClass]="config.btnClass" [btnType]="config.btnType"
+        [loaderColor]="config.loaderColor" (click)="this.config.loader = !this.config.loader">
+        Click to load
+    </lib-ngbit-dots-loading-button>
+    <pre class="my-3"><code [highlight]="example" [languages]="['typescript']"></code></pre>
+    <p class="mt-3">There are a number variants of the button. All loading indicators are in pure inlined SVG thanks to
+        <a href="http://samherbert.net/svg-loaders/" target="_blank">this amazing project</a>. You do not need any icon
+        or font
+        libraries.
+    </p>
+    <lib-ngbit-bars-loading-button btnClass="btn btn-primary mr-2" [loader]="barsLoader"
+        (click)="barsLoader = !barsLoader">
+        Load with bars
+    </lib-ngbit-bars-loading-button>
+    <lib-ngbit-rings-loading-button btnClass="btn btn-primary mr-2" [loader]="ringsLoader"
+        (click)="ringsLoader = !ringsLoader">
+        Load with rings
+    </lib-ngbit-rings-loading-button>
+    <lib-ngbit-grid-loading-button btnClass="btn btn-primary mr-2" [loader]="gridLoader"
+        (click)="gridLoader = !gridLoader">
+        Load with grid</lib-ngbit-grid-loading-button>
+    <pre class="my-3"><code [highlight]="example2" [languages]="['typescript']"></code></pre>
+</section>
+<section class="py-3">
+    <h3>API</h3>
+    <h5>NgbitLoadingButtonModule <span class="badge badge-dark">Module</span></h5>
+    <hr>
+    <h5>Ngbit[variant]LoadingButton <span class="badge badge-info">Component</span></h5>
+    <p>Replace [variant] with any of the 4: 'Dots', 'Bars', 'Rings' or 'Grid'.</p>
+    <app-api-table [tableValues]="api"></app-api-table>
+</section>

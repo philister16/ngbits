@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-primary">
+    <a class="navbar-brand" routerLink="/">
+        <img class="mr-2" src="assets/ngbits.svg" alt="Logo" height="24"><strong>Ngbits</strong>
+    </a>
+    <button class="navbar-toggler" type="button" (click)="show = !show">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="show">
+        <ul class="navbar-nav mr-auto d-md-none">
+            <li *ngFor="let item of menu" class="nav-item">
+                <a class="nav-link" [routerLink]="item.route" routerLinkActive="active">
+                    {{ item.title }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <nav class="d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+                <li *ngFor="let item of menu" class="nav-item">
+                    <a class="nav-link" [routerLink]="item.route" routerLinkActive="active">
+                        {{ item.title }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main role="main">
+        <router-outlet></router-outlet>
+    </main>
+</div>

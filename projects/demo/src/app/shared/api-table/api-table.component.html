@@ -1,0 +1,12 @@
+<table class="table table-bordered my-3">
+    <thead>
+        <tr>
+            <th *ngFor="let header of headerRow">{{ header }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of tableValues">
+            <td *ngFor="let value of row">{{ value }}</td>
+        </tr>
+    </tbody>
+</table>

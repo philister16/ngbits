@@ -18,10 +18,10 @@ export class FlashComponent {
   serviceAPI = [
     ['Method', 'Parameters', 'Description'],
     ['custom()', 'message: string, config?: NgbitFlashConfig', 'Launches a flash message.'],
-    ['success()', 'message: string, config?: NgbitFlashConfig', 'Launches a contextually styled green flash message.'],
-    ['danger()', 'message: string, config?: NgbitFlashConfig', 'Launches a contextually styled red flash message.'],
-    ['warning()', 'message: string, config?: NgbitFlashConfig', 'Launches a contextually styled yellow flash message.'],
-    ['info()', 'message: string, config?: NgbitFlashConfig', 'Launches a contextually styled blue flash message.']
+    ['success()', 'message: string, config?: NgbitFlashConfig', 'Launches a contextually styled success flash message.'],
+    ['danger()', 'message: string, config?: NgbitFlashConfig', 'Launches a contextually styled error flash message.'],
+    ['warning()', 'message: string, config?: NgbitFlashConfig', 'Launches a contextually styled warning flash message.'],
+    ['info()', 'message: string, config?: NgbitFlashConfig', 'Launches a contextually styled info flash message.']
   ];
   configAPI = [
     ['Property', 'Default', 'Description'],
@@ -30,7 +30,7 @@ export class FlashComponent {
     ['delay: number', 3000, 'How long until the flash disappears in ms.'],
     ['offset: string', '32px', 'The margin from edge of viewport.'],
     ['className: string', 'ngbit-default-flash', 'CSS classes to style the flash. ' +
-      'The default value is different depending on which method is used.']
+      'The default value is different depending on which of the 5 methods is used.']
   ];
 
   constructor(private ngbitFlash: NgbitFlashService) { }
@@ -57,7 +57,7 @@ export class FlashComponent {
 
   get flashExample1() {
     return `
-    import { NgbitFlashService, NgbitFlashConfig } from '@ngbits/flash';
+    import { NgbitFlashService, NgbitFlashConfig } from 'ngbits';
 
     constructor(private ngbitFlash: NgbitFlashService) {}
 

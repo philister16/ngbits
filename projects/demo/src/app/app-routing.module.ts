@@ -26,6 +26,10 @@ const routes: Routes = [
       {
         path: 'loading-button',
         loadChildren: () => import('./loading-button/loading-button.module').then(mod => mod.LoadingButtonModule)
+      },
+      {
+        path: 'indicator-button',
+        loadChildren: () => import('./indicator-button/indicator-button.module').then(mod => mod.IndicatorButtonModule)
       }
     ]
   },

@@ -1,0 +1,100 @@
+<h1>Indicator button</h1>
+<p>
+    Buttons that can toggle an indicator signalling to the user that something is happening.
+</p>
+<section class="py-3">
+    <h3>Examples</h3>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Loader</label>
+                <input type="text" readonly class="form-control" [(ngModel)]="config.loader">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Position</label>
+                <select class="form-control" [(ngModel)]="config.position">
+                    <option value="start">Start</option>
+                    <option value="end">End</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Button type</label>
+                <select class="form-control" [(ngModel)]="config.btnType">
+                    <option value="button">Button</option>
+                    <option value="submit">Submit</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Speed</label>
+                <select class="form-control" [(ngModel)]="config.speed">
+                    <option value="slow">Slow</option>
+                    <option value="medium">Medium</option>
+                    <option value="fast">Fast</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Button classes</label>
+                <input type="text" class="form-control" [(ngModel)]="config.btnClass">
+            </div>
+        </div>
+    </div>
+    <lib-ngbit-notch-indicator-button [position]="config.position" [speed]="config.speed" [loader]="config.loader"
+        [btnClass]="config.btnClass" [btnType]="config.btnType" (click)="config.loader = !config.loader">
+        Click to show indicator
+    </lib-ngbit-notch-indicator-button>
+    <pre class="my-3"><code [highlight]="example" [languages]="['html']"></code></pre>
+    <p>There are 7 different variants of the indicator button you can choose from:</p>
+    <ul>
+        <li>Notch</li>
+        <li>Eclipse</li>
+        <li>Bottle</li>
+        <li>Arrow</li>
+        <li>Pulse</li>
+        <li>Disk</li>
+        <li>Circle</li>
+    </ul>
+    <lib-ngbit-eclipse-indicator-button [loader]="notch" btnClass="btn btn-primary mr-2" (click)="notch = !notch">
+        Notch button
+    </lib-ngbit-eclipse-indicator-button>
+
+    <lib-ngbit-eclipse-indicator-button [loader]="eclipse" btnClass="btn btn-primary mr-2" (click)="eclipse = !eclipse">
+        Eclipse button
+    </lib-ngbit-eclipse-indicator-button>
+
+    <lib-ngbit-bottle-indicator-button [loader]="bottle" btnClass="btn btn-primary mr-2" (click)="bottle = !bottle">
+        Bottle button
+    </lib-ngbit-bottle-indicator-button>
+
+    <lib-ngbit-arrow-indicator-button [loader]="arrow" btnClass="btn btn-primary mr-2" (click)="arrow = !arrow">
+        Arrow button
+    </lib-ngbit-arrow-indicator-button>
+
+    <lib-ngbit-pulse-indicator-button [loader]="pulse" btnClass="btn btn-primary mr-2" (click)="pulse = !pulse">
+        Pulse button
+    </lib-ngbit-pulse-indicator-button>
+
+    <lib-ngbit-disk-indicator-button [loader]="disk" btnClass="btn btn-primary mr-2" (click)="disk = !disk">
+        Disk button
+    </lib-ngbit-disk-indicator-button>
+
+    <lib-ngbit-circle-indicator-button [loader]="circle" btnClass="btn btn-primary mr-2" (click)="circle = !circle">
+        Circle button
+    </lib-ngbit-circle-indicator-button>
+    <pre class="my-3"><code [highlight]="example2" [languages]="['html']"></code></pre>
+</section>
+<section class="py-3">
+    <h3>API</h3>
+    <h5>NgbitIndicatorButtonModule <span class="badge badge-dark">Module</span></h5>
+    <hr>
+    <h5>Ngbit[variant]IndicatorButton <span class="badge badge-info">Component</span></h5>
+    <p>Replace [variant] with any of the 7: 'Notch', 'Eclipse', 'Bottle', 'Arrow', 'Pulse', 'Disk' or 'Grid'.</p>
+    <app-api-table [tableValues]="api"></app-api-table>
+</section>

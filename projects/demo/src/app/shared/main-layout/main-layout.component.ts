@@ -19,6 +19,10 @@ export class MainLayoutComponent {
     {
       title: 'Loading button',
       route: '/loading-button'
+    },
+    {
+      title: 'Indicator button',
+      route: '/indicator-button'
     }
   ];
 

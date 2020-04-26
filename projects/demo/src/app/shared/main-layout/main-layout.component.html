@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" [class.show]="show">
-        <ul class="navbar-nav mr-auto d-md-none">
+        <ul class="navbar-nav mr-auto d-md-none" (click)="show = false">
             <li *ngFor="let item of menu" class="nav-item">
                 <a class="nav-link" [routerLink]="item.route" routerLinkActive="active">
                     {{ item.title }}

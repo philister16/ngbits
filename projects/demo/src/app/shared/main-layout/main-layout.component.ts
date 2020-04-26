@@ -23,6 +23,10 @@ export class MainLayoutComponent {
     {
       title: 'Indicator button',
       route: '/indicator-button'
+    },
+    {
+      title: 'Dropzone',
+      route: '/dropzone'
     }
   ];
 

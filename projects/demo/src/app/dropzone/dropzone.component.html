@@ -1,0 +1,26 @@
+<h1>Dropzone</h1>
+<p>A directive to drag & drop files. It emits a dropped event everytime the user drags and drops a file onto the
+    host element. This is useful to handle uploads.</p>
+<section class="py-3">
+    <h3>Example</h3>
+    <div class="wrapper d-flex justify-content-center align-items-center" libNgbitDropzone
+        (hovered)="isHovering = $event" [ngClass]="{ 'bg-secondary': !isHovering, 'bg-primary': isHovering }"
+        (dropped)="droppedFiles = $event">
+        <p *ngIf="!droppedFiles" class="text-light">Drop files here</p>
+        <div *ngIf="droppedFiles" class="text-light">
+            <p>You dropped the following files:</p>
+            <ul class="list-unstyled">
+                <li *ngFor="let file of droppedFiles | keyvalue">{{ file.value.name }}</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-light my-2" (click)="droppedFiles = null">Clear</button>
+        </div>
+    </div>
+    <pre class="my-3"><code [highlight]="example" [languages]="['html']"></code></pre>
+</section>
+<section class="py-3">
+    <h3>API</h3>
+    <h5>NgbitDropzoneModule <span class="badge badge-dark">Module</span></h5>
+    <hr>
+    <h5>NgbitDropzoneDirective <span class="badge badge-info">Directive</span></h5>
+    <app-api-table [tableValues]="api"></app-api-table>
+</section>

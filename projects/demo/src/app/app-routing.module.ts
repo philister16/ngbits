@@ -30,6 +30,10 @@ const routes: Routes = [
       {
         path: 'indicator-button',
         loadChildren: () => import('./indicator-button/indicator-button.module').then(mod => mod.IndicatorButtonModule)
+      },
+      {
+        path: 'dropzone',
+        loadChildren: () => import('./dropzone/dropzone.module').then(mod => mod.DropzoneModule)
       }
     ]
   },

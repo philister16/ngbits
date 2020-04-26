@@ -15,3 +15,6 @@ export * from './lib/ngbit-loading-button/ngbit-loading-button.module';
 
 // Indicator buttons
 export * from './lib/ngbit-indicator-button/ngbit-indicator-button.module';
+
+// Dropzone
+export * from './lib/ngbit-dropzone/ngbit-dropzone.module';

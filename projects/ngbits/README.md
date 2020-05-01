@@ -1,24 +1,51 @@
 # Ngbits
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+Small bits of Angular for everyday use. This project contains a number of small libraries with more to be added over time. It is not yet another feature complete components library but instead aims to add additional features rarely found in frontend libraries out of the box.
 
-## Code scaffolding
+## Getting started
 
-Run `ng generate component component-name --project ngbits` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngbits`.
-> Note: Don't forget to add `--project ngbits` or else it will be added to the default project in your `angular.json` file. 
+Visit the [Docs](https://philister16.github.io/ngbits) for more detailed usage instructions.
 
-## Build
+Install the package:
 
-Run `ng build ngbits` to build the project. The build artifacts will be stored in the `dist/` directory.
+`npm install --save @ngbits/ngbits`
 
-## Publishing
+Each individual ngbit feature consists of a separate module. Import the respective feature's module and add it to the imports array of a module in your application. For example to use the Flash feature do the following:
 
-After building your library with `ng build ngbits`, go to the dist folder `cd dist/ngbits` and run `npm publish`.
+```typescript
+import { NgbitFlashModule } from 'ngbits';
 
-## Running unit tests
+@NgModule({
+    // ... module declarations etc.
+    imports: [
+    NgbitFlashModule
+    ],
+    // ... rest of module
+})
+export class AppModule { }
+```
 
-Run `ng test ngbits` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Optional
 
-## Further help
+The library comes with a number of default stylings which make use of the popular [Bootstrap CSS](https://getbootstrap.com) framework. For these to work, you need to also install and import boostrap.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`npm install --save bootstrap`
+
+```scss
+// styles.scss
+@import '~bootstrap/scss/bootstrap`;
+```
+
+## Docs
+
+You can find the full documentation [here](https://philister16.github.io/ngbits).
+
+## License
+
+Copyright 2020 Philister16
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

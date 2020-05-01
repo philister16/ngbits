@@ -6,7 +6,7 @@ This project contains a number of small libraries useful in everday Angular deve
 
 To use the library install it from NPM.
 
-`npm install --save ngbits`
+`npm install --save @ngbits/ngbits`
 
 Please visit the [Docs](https://philister16.github.io/ngbits/) for a more detailed usage description.
 

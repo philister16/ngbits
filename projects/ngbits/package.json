@@ -1,6 +1,23 @@
 {
   "name": "ngbits",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "Useful bits of Angular for everyday use",
+  "keywords": [
+    "angular",
+    "buttons",
+    "loader",
+    "loading button",
+    "dropzone",
+    "flash",
+    "toast",
+    "snackbar"
+  ],
+  "homepage": "https://philister16.github.io/ngbits/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philister16/ngbits"
+  },
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",

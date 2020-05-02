@@ -18,3 +18,6 @@ export * from './lib/ngbit-indicator-button/ngbit-indicator-button.module';
 
 // Dropzone
 export * from './lib/ngbit-dropzone/ngbit-dropzone.module';
+
+// Indeterminate bar
+export * from './lib/ngbit-indeterminate-bar/ngbit-indeterminate-bar.module';

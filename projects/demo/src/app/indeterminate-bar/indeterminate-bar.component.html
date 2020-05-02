@@ -1,0 +1,74 @@
+<h1>Indeterminate bar</h1>
+<p>
+    A material style indeterminate progressbar useful to indicate to the user that something is happening.
+</p>
+<section class="py-3">
+    <h3>Example</h3>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="from-group">
+                <label>Background</label>
+                <input type="text" class="form-control" [(ngModel)]="config.background">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Color</label>
+                <input type="text" class="form-control" [(ngModel)]="config.color">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Indeterminate</label>
+                <select class="form-control" [(ngModel)]="config.indeterminate">
+                    <option [ngValue]="true">True</option>
+                    <option [ngValue]="false">False</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Progress</label>
+                <input type="range" class="form-control-range" min="0" max="100" [(ngModel)]="config.progress">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Height</label>
+                <input type="text" class="form-control" [(ngModel)]="config.height">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Bootstrap style</label>
+                <select class="form-control" [(ngModel)]="config.bsStyle">
+                    <option [ngValue]="null">None</option>
+                    <option value="primary">Primary</option>
+                    <option value="secondary">Secondary</option>
+                    <option value="info">Info</option>
+                    <option value="success">Success</option>
+                    <option value="warning">Warning</option>
+                    <option value="danger">Danger</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="mb-4">
+    <lib-ngbit-indeterminate-bar [background]="config.background" [color]="config.color"
+        [indeterminate]="config.indeterminate" [progress]="config.progress" [height]="config.height"
+        [bsStyle]="config.bsStyle">
+    </lib-ngbit-indeterminate-bar>
+</div>
+<p>The bar by default is indeterminate which is useful to indicate loading states. If 'indeterminate' is set to false,
+    the bar becomes a usual progress bar and the progress value can be set via the 'progress' attribute. The bar
+    integrates seamlessly with the Bootstrap CSS framework and accepts any of bootstrap's contextual classes. This is
+    entirely optional!</p>
+<pre><code [highlight]="example" [languages]="['html']"></code></pre>
+<section class="py-3">
+    <h3>API</h3>
+    <h5>NgbitIndeterminateBarModule <span class="badge badge-dark">Module</span></h5>
+    <hr>
+    <h5>NgbitIndeterminateBar <span class="badge badge-info">Component</span></h5>
+    <app-api-table [tableValues]="api"></app-api-table>
+</section>

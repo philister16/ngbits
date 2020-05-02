@@ -34,6 +34,10 @@ const routes: Routes = [
       {
         path: 'dropzone',
         loadChildren: () => import('./dropzone/dropzone.module').then(mod => mod.DropzoneModule)
+      },
+      {
+        path: 'indeterminate-bar',
+        loadChildren: () => import('./indeterminate-bar/indeterminate-bar.module').then(mod => mod.IndeterminateBarModule)
       }
     ]
   },

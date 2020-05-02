@@ -27,6 +27,10 @@ export class MainLayoutComponent {
     {
       title: 'Dropzone',
       route: '/dropzone'
+    },
+    {
+      title: 'Indeterminate bar',
+      route: '/indeterminate-bar'
     }
   ];
 

@@ -15,9 +15,9 @@
             </div>
         </div>
     </div>
-    <lib-ngbit-pretty-file-input [multiple]="multiple" (files)="onFiles($event)">
+    <ngbit-pretty-file-input [multiple]="multiple" (files)="onFiles($event)">
         <button class="btn btn-primary">Choose file</button>
-    </lib-ngbit-pretty-file-input>
+    </ngbit-pretty-file-input>
     <div class="my-3">
         <p *ngIf="!files; else list">You have not yet chosen any files.</p>
         <ng-template #list>
@@ -30,9 +30,9 @@
     </div>
     <pre class="my-3"><code [highlight]="example" [languages]="['html']"></code></pre>
     <p>You can place any markup to the component. Here for example just a simple link:
-        <lib-ngbit-pretty-file-input>
+        <ngbit-pretty-file-input>
             <span class="link">Chose a file</span>
-        </lib-ngbit-pretty-file-input>
+        </ngbit-pretty-file-input>
     </p>
     <pre class="my-3"><code [highlight]="example2" [languages]="['html']"></code></pre>
 </section>

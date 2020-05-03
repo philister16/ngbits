@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'lib-ngbit-indeterminate-bar',
+    selector: 'ngbit-indeterminate-bar',
     template: `
         <div class="progress {{ bsStyle ? 'bg-light' : '' }}" [style.backgroundColor]="background" [style.height]="height">
             <div class="{{ bsStyle ? 'bg-' + bsStyle : '' }}" [ngClass]="{ 'indeterminate': indeterminate, 'determinate': !indeterminate }"

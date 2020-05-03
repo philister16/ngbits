@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
-    selector: 'lib-ngbit-pretty-file-input',
+    selector: 'ngbit-pretty-file-input',
     template: `
         <div class="wrapper" (click)="fileInput.click()">
             <ng-content></ng-content>

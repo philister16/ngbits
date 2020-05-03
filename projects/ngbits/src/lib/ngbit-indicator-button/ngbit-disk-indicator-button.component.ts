@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'lib-ngbit-disk-indicator-button',
+    selector: 'ngbit-disk-indicator-button',
     template: `
         <button [class]="btnClass" [type]="btnType">
             <span *ngIf="loader && position === 'start'">

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'lib-ngbit-eclipse-indicator-button',
+    selector: 'ngbit-eclipse-indicator-button',
     template: `
         <button [class]="btnClass" [type]="btnType">
             <span *ngIf="loader && position === 'start'">

@@ -12,7 +12,7 @@ interface NgbitFlashInit {
 }
 
 @Component({
-  selector: 'lib-ngbit-flash',
+  selector: 'ngbit-flash',
   template: `
     <div [@fadeInOut] class="ngbit-flash {{ config.className }}" [ngStyle]="{
       top: init?.top,

@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'lib-ngbit-bars-loading-button',
+  selector: 'ngbit-bars-loading-button',
   template: `
     <button #btn [class]="btnClass" [type]="btnType" [style.width]="dimensions?.width + 'px'" [style.height]="dimensions?.height + 'px'">
       <span *ngIf="!loader" class="text">

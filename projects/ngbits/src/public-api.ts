@@ -21,3 +21,6 @@ export * from './lib/ngbit-dropzone/ngbit-dropzone.module';
 
 // Indeterminate bar
 export * from './lib/ngbit-indeterminate-bar/ngbit-indeterminate-bar.module';
+
+// Pretty file input
+export * from './lib/ngbit-pretty-file-input/ngbit-pretty-file-input.module';

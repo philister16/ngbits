@@ -38,6 +38,10 @@ const routes: Routes = [
       {
         path: 'indeterminate-bar',
         loadChildren: () => import('./indeterminate-bar/indeterminate-bar.module').then(mod => mod.IndeterminateBarModule)
+      },
+      {
+        path: 'pretty-file-input',
+        loadChildren: () => import('./pretty-file-input/pretty-file-input.module').then(mod => mod.PrettyFileInputModule)
       }
     ]
   },

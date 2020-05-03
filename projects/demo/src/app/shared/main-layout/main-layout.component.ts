@@ -31,6 +31,10 @@ export class MainLayoutComponent {
     {
       title: 'Indeterminate bar',
       route: '/indeterminate-bar'
+    },
+    {
+      title: 'Pretty file input',
+      route: '/pretty-file-input'
     }
   ];
 

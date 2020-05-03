@@ -1,0 +1,46 @@
+<h1>Pretty file input</h1>
+<p>A component that you lets you style the file input element easily. It makes use of Angular's templating and does not
+    rely on CSS hacks. The component fires a custom 'files' event that returns an HTML FileList whenever files are
+    selected.</p>
+<section class="py-3">
+    <h3>Example</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Multiple</label>
+                <select class="custom-select" [(ngModel)]="multiple">
+                    <option [ngValue]="true">True</option>
+                    <option [ngValue]="false">False</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <lib-ngbit-pretty-file-input [multiple]="multiple" (files)="onFiles($event)">
+        <button class="btn btn-primary">Choose file</button>
+    </lib-ngbit-pretty-file-input>
+    <div class="my-3">
+        <p *ngIf="!files; else list">You have not yet chosen any files.</p>
+        <ng-template #list>
+            <p>You have chosen the following file{{ files?.length > 1 ? 's' : '' }}:</p>
+            <ul class="list">
+                <li *ngFor="let file of files | keyvalue">{{ file.value.name }}</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-secondary" (click)="files = null">Clear</button>
+        </ng-template>
+    </div>
+    <pre class="my-3"><code [highlight]="example" [languages]="['html']"></code></pre>
+    <p>You can place any markup to the component. Here for example just a simple link:
+        <lib-ngbit-pretty-file-input>
+            <span class="link">Chose a file</span>
+        </lib-ngbit-pretty-file-input>
+    </p>
+    <pre class="my-3"><code [highlight]="example2" [languages]="['html']"></code></pre>
+</section>
+<section class="py-3">
+    <h3>API</h3>
+    <h5>NgbitPrettyFileInpuModule <span class="badge badge-dark">Module</span></h5>
+    <hr>
+    <h5>NgbitPrettyFileInputComponent <span class="badge badge-primary">Component</span></h5>
+    <app-api-table [tableValues]="apiA"></app-api-table>
+    <app-api-table [tableValues]="apiB"></app-api-table>
+</section>

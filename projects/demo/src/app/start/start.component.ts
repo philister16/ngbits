@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
   usageInstructions = `
-    import { NgbitFlashModule } from 'ngbits';
+    import { NgbitFlashModule } from '@ngbits/ngbits';
 
     @NgModule({
       // ... module declarations etc.

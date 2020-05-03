@@ -13,7 +13,7 @@ Install the package:
 Each individual ngbit feature consists of a separate module. Import the respective feature's module and add it to the imports array of a module in your application. For example to use the Flash feature do the following:
 
 ```typescript
-import { NgbitFlashModule } from 'ngbits';
+import { NgbitFlashModule } from '@ngbits/ngbits';
 
 @NgModule({
     // ... module declarations etc.
@@ -24,6 +24,8 @@ import { NgbitFlashModule } from 'ngbits';
 })
 export class AppModule { }
 ```
+
+> Take note that the package name is in plural `@ngbits/ngbits` whereas the individual features use the singular form like `Ngbit[SomeFeature]Module)`.
 
 ### Optional
 

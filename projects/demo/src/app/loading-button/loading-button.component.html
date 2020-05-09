@@ -18,7 +18,7 @@
         <div class="col-md-3">
             <div class="form-group">
                 <label>Button type</label>
-                <select class="form-control" [(ngModel)]="config.btnType">
+                <select class="custom-select" [(ngModel)]="config.btnType">
                     <option value="button">Button</option>
                     <option value="submit">Submit</option>
                 </select>
@@ -26,30 +26,59 @@
         </div>
         <div class="col-md-3">
             <div class="form-group">
-                <label>Loader color</label>
-                <input type="text" class="form-control" [(ngModel)]="config.loaderColor">
+                <label>Speed</label>
+                <select class="custom-select" [(ngModel)]="config.speed">
+                    <option value="medium">Medium</option>
+                    <option value="slow">Slow</option>
+                    <option value="fast">Fast</option>
+                </select>
             </div>
         </div>
     </div>
     <ngbit-dots-loading-button [loader]="this.config.loader" [btnClass]="config.btnClass" [btnType]="config.btnType"
-        [loaderColor]="config.loaderColor" (click)="this.config.loader = !this.config.loader">
+        [speed]="config.speed" (click)="this.config.loader = !this.config.loader">
         Click to load
     </ngbit-dots-loading-button>
     <pre class="my-3"><code [highlight]="example" [languages]="['html']"></code></pre>
-    <p class="mt-3">There are a number of variants of the button. All loading indicators are in pure inlined SVG thanks
-        to
-        <a href="http://samherbert.net/svg-loaders/" target="_blank">this amazing project</a>. You do not need any icon
+    <p class="mt-3">There are 10 variants of the button corresponding with the 10 different Ngbits indicators. All
+        loading indicators are in pure inlined SVG. You do not need any icon
         or font
         libraries.
     </p>
-    <ngbit-bars-loading-button btnClass="btn btn-primary mr-2" [loader]="barsLoader" (click)="barsLoader = !barsLoader">
-        Load with bars
-    </ngbit-bars-loading-button>
-    <ngbit-rings-loading-button btnClass="btn btn-primary mr-2" [loader]="ringsLoader"
-        (click)="ringsLoader = !ringsLoader">
-        Load with rings
-    </ngbit-rings-loading-button>
-    <ngbit-grid-loading-button btnClass="btn btn-primary mr-2" [loader]="gridLoader" (click)="gridLoader = !gridLoader">
+    <ngbit-notch-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="notchLoader"
+        (click)="notchLoader = !notchLoader">
+        Notch loading
+    </ngbit-notch-loading-button>
+    <ngbit-eclipse-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="eclipseLoader"
+        (click)="eclipseLoader = !eclipseLoader">
+        Eclipse loading
+    </ngbit-eclipse-loading-button>
+    <ngbit-bottle-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="bottleLoader"
+        (click)="bottleLoader = !bottleLoader">
+        Bottle loading
+    </ngbit-bottle-loading-button>
+    <ngbit-arrow-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="arrowLoader"
+        (click)="arrowLoader = !arrowLoader">
+        Arrow loading
+    </ngbit-arrow-loading-button>
+    <ngbit-pulse-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="pulseLoader"
+        (click)="pulseLoader = !pulseLoader">
+        Pulse loading
+    </ngbit-pulse-loading-button>
+    <ngbit-circle-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="circleLoader"
+        (click)="circleLoader = !circleLoader">
+        Circle loading
+    </ngbit-circle-loading-button>
+    <ngbit-ripple-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="rippleLoader"
+        (click)="rippleLoader = !rippleLoader">
+        Ripple loading
+    </ngbit-ripple-loading-button>
+    <ngbit-cube-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="cubeLoader"
+        (click)="cubeLoader = !cubeLoader">
+        Cube loading
+    </ngbit-cube-loading-button>
+    <ngbit-grid-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="gridLoader"
+        (click)="gridLoader = !gridLoader">
         Load with grid</ngbit-grid-loading-button>
     <pre class="my-3"><code [highlight]="example2" [languages]="['html']"></code></pre>
 </section>
@@ -58,6 +87,7 @@
     <h5>NgbitLoadingButtonModule <span class="badge badge-dark">Module</span></h5>
     <hr>
     <h5>Ngbit[variant]LoadingButton <span class="badge badge-info">Component</span></h5>
-    <p>Replace [variant] with any of the 4: 'Dots', 'Bars', 'Rings' or 'Grid'.</p>
+    <p>Replace [variant] with any of the 10: 'Dots', 'Notch', 'Eclipse', 'Bottle', 'Arrow', 'Pulse', 'Circle', 'Ripple',
+        'Cube' or 'Grid'.</p>
     <app-api-table [tableValues]="api"></app-api-table>
 </section>

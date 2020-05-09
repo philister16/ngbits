@@ -1,0 +1,97 @@
+<h1>Indicators</h1>
+<p class="lead">Small components with spinners and other animated bits to indicate to the user that something is
+    happening. All
+    components rely entirely on inline SVG so you don't have to import any 3rd party icon libraries.</p>
+<section class="py-3">
+    <h3>Example</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Color</label>
+                <input type="text" class="form-control" [(ngModel)]="config.color">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Height</label>
+                <input type="text" class="form-control" [(ngModel)]="config.height">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Speed</label>
+                <select class="custom-select" [(ngModel)]="config.speed">
+                    <option value="medium">Medium</option>
+                    <option value="slow">Slow</option>
+                    <option value="fast">Fast</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 text-right">
+            <p class="lead">
+                <ngbit-notch-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-notch-indicator>
+                Notch indicator
+            </p>
+            <p class="lead">
+                <ngbit-eclipse-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-eclipse-indicator>
+                Eclipse indicator
+            </p>
+            <p class="lead">
+                <ngbit-bottle-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-bottle-indicator>
+                Bottle indicator
+            </p>
+            <p class="lead">
+                <ngbit-arrow-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-arrow-indicator>
+                Arrow indicator
+            </p>
+            <p class="lead">
+                <ngbit-pulse-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-pulse-indicator>
+                Pulse indicator
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p class="lead">
+                <ngbit-circle-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-circle-indicator>
+                Circle indicator
+            </p>
+            <p class="lead">
+                <ngbit-ripple-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-ripple-indicator>
+                Ripple indicator
+            </p>
+            <p class="lead">
+                <ngbit-cube-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-cube-indicator>
+                Cube indicator
+            </p>
+            <p class="lead">
+                <ngbit-dots-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-dots-indicator>
+                Dots indicator
+            </p>
+            <p class="lead">
+                <ngbit-grid-indicator [color]="config.color" [height]="config.height" [speed]="config.speed">
+                </ngbit-grid-indicator>
+                Grid indicator
+            </p>
+        </div>
+    </div>
+    <pre class="my-3"><code [highlight]="example" [languages]="['html']"></code></pre>
+</section>
+<section class="py-3">
+    <h3>API</h3>
+    <h5>NgbitIndicatorsModule <span class="badge badge-dark">Module</span></h5>
+    <hr>
+    <h5>Ngbit[Variant]IndicatorComponent <span class="badge badge-info">Component</span></h5>
+    <p>Replace [Variant] with any of the following 10: 'Notch', 'Eclipse', 'Bottle', 'Arrow', 'Pulse', 'Circle',
+        'Ripple', 'Cube', 'Dots' and 'Grid'.</p>
+    <app-api-table [tableValues]="api"></app-api-table>
+</section>

@@ -13,6 +13,10 @@ export class IndicatorButtonComponent {
   pulse = false;
   disk = false;
   circle = false;
+  cube = false;
+  ripple = false;
+  dots = false;
+  grid = false;
   config = {
     loader: false,
     position: 'start',
@@ -45,33 +49,42 @@ export class IndicatorButtonComponent {
 
   get example2() {
     return `
-    <ngbit-eclipse-indicator-button [loader]="notch" btnClass="btn btn-primary mr-2" (click)="notch = !notch">
-        Notch button
+    <ngbit-eclipse-indicator-button [loader]="eclipse" btnClass="btn btn-primary mr-2 mb-2"
+        (click)="eclipse = !eclipse">
+        Eclipse button
     </ngbit-eclipse-indicator-button>
 
-    <ngbit-eclipse-indicator-button [loader]="eclipse" btnClass="btn btn-primary mr-2"
-        (click)="eclipse = !eclipse">Eclipse button
-    </ngbit-eclipse-indicator-button>
-
-    <ngbit-bottle-indicator-button [loader]="bottle" btnClass="btn btn-primary mr-2" (click)="bottle = !bottle">
+    <ngbit-bottle-indicator-button [loader]="bottle" btnClass="btn btn-primary mr-2 mb-2" (click)="bottle = !bottle">
         Bottle button
     </ngbit-bottle-indicator-button>
 
-    <ngbit-arrow-indicator-button [loader]="arrow" btnClass="btn btn-primary mr-2" (click)="arrow = !arrow">
+    <ngbit-arrow-indicator-button [loader]="arrow" btnClass="btn btn-primary mr-2 mb-2" (click)="arrow = !arrow">
         Arrow button
     </ngbit-arrow-indicator-button>
 
-    <ngbit-pulse-indicator-button [loader]="pulse" btnClass="btn btn-primary mr-2" (click)="pulse = !pulse">
+    <ngbit-pulse-indicator-button [loader]="pulse" btnClass="btn btn-primary mr-2 mb-2" (click)="pulse = !pulse">
         Pulse button
     </ngbit-pulse-indicator-button>
 
-    <ngbit-disk-indicator-button [loader]="disk" btnClass="btn btn-primary mr-2" (click)="disk = !disk">
-        Disk button
-    </ngbit-disk-indicator-button>
-
-    <ngbit-circle-indicator-button [loader]="circle" btnClass="btn btn-primary mr-2" (click)="circle = !circle">
+    <ngbit-circle-indicator-button [loader]="circle" btnClass="btn btn-primary mr-2 mb-2" (click)="circle = !circle">
         Circle button
     </ngbit-circle-indicator-button>
+
+    <ngbit-ripple-indicator-button [loader]="ripple" btnClass="btn btn-primary mr-2 mb-2" (click)="ripple = !ripple">
+        Ripple button
+    </ngbit-ripple-indicator-button>
+
+    <ngbit-cube-indicator-button [loader]="cube" btnClass="btn btn-primary mr-2 mb-2" (click)="cube = !cube">
+        Cube button
+    </ngbit-cube-indicator-button>
+
+    <ngbit-dots-indicator-button [loader]="dots" btnClass="btn btn-primary mr-2 mb-2" (click)="dots = !dots">
+        Dots button
+    </ngbit-dots-indicator-button>
+
+    <ngbit-grid-indicator-button [loader]="grid" btnClass="btn btn-primary mr-2 mb-2" (click)="grid = !grid">
+        Grid button
+    </ngbit-grid-indicator-button>
     `;
   }
 

@@ -10,12 +10,11 @@ export class PrettyFileInputComponent implements OnInit {
   multiple = true;
   apiA = [
     ['Input', 'Default', 'Description'],
-    ['<content>', '', 'The markup which can be placed between the components html tags.'],
-    ['multiple', 'true', 'If true lets user select more than 1 file at the same time.']
+    ['multiple: boolean', 'true', 'If true lets user select more than 1 file at the same time.']
   ];
   apiB = [
-    ['Output', 'Type', 'Description'],
-    ['files', 'FileList', 'Fires an event containing the list of the selected files.']
+    ['Output', 'Description'],
+    ['files: FileList', 'Fires an event containing the list of the selected files.']
   ];
 
 

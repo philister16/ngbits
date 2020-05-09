@@ -42,6 +42,14 @@ const routes: Routes = [
       {
         path: 'pretty-file-input',
         loadChildren: () => import('./pretty-file-input/pretty-file-input.module').then(mod => mod.PrettyFileInputModule)
+      },
+      {
+        path: 'blocknload',
+        loadChildren: () => import('./blocknload/blocknload.module').then(mod => mod.BlocknloadModule)
+      },
+      {
+        path: 'indicators',
+        loadChildren: () => import('./indicators/indicators.module').then(mod => mod.IndicatorsModule)
       }
     ]
   },

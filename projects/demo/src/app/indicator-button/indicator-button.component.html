@@ -58,8 +58,11 @@
         <li>Bottle</li>
         <li>Arrow</li>
         <li>Pulse</li>
-        <li>Disk</li>
         <li>Circle</li>
+        <li>Ripple</li>
+        <li>Cube</li>
+        <li>Dots</li>
+        <li>Grid</li>
     </ul>
 
     <ngbit-eclipse-indicator-button [loader]="eclipse" btnClass="btn btn-primary mr-2 mb-2"
@@ -79,13 +82,26 @@
         Pulse button
     </ngbit-pulse-indicator-button>
 
-    <ngbit-disk-indicator-button [loader]="disk" btnClass="btn btn-primary mr-2 mb-2" (click)="disk = !disk">
-        Disk button
-    </ngbit-disk-indicator-button>
-
     <ngbit-circle-indicator-button [loader]="circle" btnClass="btn btn-primary mr-2 mb-2" (click)="circle = !circle">
         Circle button
     </ngbit-circle-indicator-button>
+
+    <ngbit-ripple-indicator-button [loader]="ripple" btnClass="btn btn-primary mr-2 mb-2" (click)="ripple = !ripple">
+        Ripple button
+    </ngbit-ripple-indicator-button>
+
+    <ngbit-cube-indicator-button [loader]="cube" btnClass="btn btn-primary mr-2 mb-2" (click)="cube = !cube">
+        Cube button
+    </ngbit-cube-indicator-button>
+
+    <ngbit-dots-indicator-button [loader]="dots" btnClass="btn btn-primary mr-2 mb-2" (click)="dots = !dots">
+        Dots button
+    </ngbit-dots-indicator-button>
+
+    <ngbit-grid-indicator-button [loader]="grid" btnClass="btn btn-primary mr-2 mb-2" (click)="grid = !grid">
+        Grid button
+    </ngbit-grid-indicator-button>
+
     <pre class="my-3"><code [highlight]="example2" [languages]="['html']"></code></pre>
 </section>
 <section class="py-3">
@@ -93,6 +109,7 @@
     <h5>NgbitIndicatorButtonModule <span class="badge badge-dark">Module</span></h5>
     <hr>
     <h5>Ngbit[variant]IndicatorButton <span class="badge badge-info">Component</span></h5>
-    <p>Replace [variant] with any of the 7: 'Notch', 'Eclipse', 'Bottle', 'Arrow', 'Pulse', 'Disk' or 'Grid'.</p>
+    <p>Replace [variant] with any of the 10: 'Notch', 'Eclipse', 'Bottle', 'Arrow', 'Pulse', 'Circle', 'Ripple', 'Cube',
+        'Dots' or 'Grid'.</p>
     <app-api-table [tableValues]="api"></app-api-table>
 </section>

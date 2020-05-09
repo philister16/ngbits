@@ -17,6 +17,10 @@ export class MainLayoutComponent {
       route: '/flash'
     },
     {
+      title: 'Indicators',
+      route: '/indicators'
+    },
+    {
       title: 'Loading button',
       route: '/loading-button'
     },
@@ -35,6 +39,10 @@ export class MainLayoutComponent {
     {
       title: 'Pretty file input',
       route: '/pretty-file-input'
+    },
+    {
+      title: 'Block\'n\'Load',
+      route: '/blocknload'
     }
   ];
 

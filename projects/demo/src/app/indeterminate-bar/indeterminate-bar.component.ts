@@ -16,12 +16,12 @@ export class IndeterminateBarComponent implements OnInit {
   };
   api = [
     ['Input', 'Default', 'Description'],
-    ['background', 'lightgrey', 'The background color of the bar.'],
-    ['color', 'dodgerblue', 'The color of the progress and indeterminate highlight.'],
-    ['indeterminate', 'true', 'If the bar should behave indeterminately.'],
-    ['progress', '50', 'If indeterminate is false then this is used to set the progress.'],
-    ['height', '4px', 'A css height.'],
-    ['bsStyle', 'null', 'A contextual bootstrap css class, any of primary, secondary, info, success, warning and danger.']
+    ['background: string', 'lightgrey', 'The background color of the bar.'],
+    ['color: string', 'dodgerblue', 'The color of the progress and indeterminate highlight.'],
+    ['indeterminate: boolean', 'true', 'If the bar should behave indeterminately.'],
+    ['progress: number', '50', 'If indeterminate is false then this is used to set the progress.'],
+    ['height: string', '4px', 'A css height.'],
+    ['bsStyle: \'primary\' | \'secondary\' | \'info\' | \'danger\' | \'warning\' | \'success\'', 'null', 'A contextual bootstrap css class, any of primary, secondary, info, success, warning and danger.']
   ];
 
   constructor() { }

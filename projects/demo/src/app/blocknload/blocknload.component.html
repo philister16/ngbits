@@ -3,10 +3,76 @@
     takes time and the user has to wait (is "blocked") before continue to use the app.</p>
 <section class="py-3">
     <h3>Example</h3>
+    <p>The <code>overlay</code> method takes a component and a data object as parameters. The component can contain any
+        template and will have access to all properties on the data object.</p>
+    <p>The method returns an instance of the overlay component. It contains
+        a <code>done</code> method to destroy the overlay once the loading is done.</p>
     <div class="row">
-
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Message (passed via data object)</label>
+                <input type="text" class="form-control" [(ngModel)]="config.message">
+            </div>
+        </div>
     </div>
-    <button class="btn btn-primary mr-2" (click)="message()">Launch a blocking message loader</button>
-    <button class="btn btn-primary mr-2" (click)="bar()">Launch with bar</button>
-    <button class="btn btn-primary mr-2" (click)="custom()">Custom</button>
+    <button class="btn btn-primary mr-2" (click)="overlay()">Overlay with message</button>
+    <button class="btn btn-primary mr-2" (click)="overlayFull()">Fullscreen overlay with message</button>
+    <pre class="my-3"><code [highlight]="example" [languages]="['typescript']"></code></pre>
+    <p>The <code>bar</code> method displays a material style indeterminate bar at the top or bottom of the screen
+        instead of an overlay. The method takes a configuration object which accepts a number of properties to define
+        the bar's appearance.</p>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Position</label>
+                <select class="custom-select" [(ngModel)]="config.position">
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Background</label>
+                <input type="text" class="form-control" [(ngModel)]="config.background">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Color</label>
+                <input type="text" class="form-control" [(ngModel)]="config.color">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Height</label>
+                <input type="text" class="form-control" [(ngModel)]="config.height">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Bootstrap style</label>
+                <select class="custom-select" [(ngModel)]="config.bootstrap">
+                    <option [ngValue]="null">None</option>
+                    <option value="primary">Primary</option>
+                    <option value="secondary">Secondary</option>
+                    <option value="info">Info</option>
+                    <option value="success">Success</option>
+                    <option value="warning">Warning</option>
+                    <option value="danger">Danger</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary mr-2" (click)="bar()">Blocknload with bar</button>
+    <pre class="my-3"><code [highlight]="example2" [languages]="['typescript']"></code></pre>
+</section>
+<section class="py-3">
+    <h3>API</h3>
+    <h5>NgbitBlocknloadModule <span class="badge badge-dark">Module</span></h5>
+    <hr>
+    <h5>NgbitBlocknloadService <span class="badge badge-primary">Service</span></h5>
+    <app-api-table [tableValues]="api"></app-api-table>
+    <h5>NgbitBlocknloadOptions <span class="badge badge-secondary">Interface</span></h5>
+    <app-api-table [tableValues]="interfaceApi"></app-api-table>
 </section>

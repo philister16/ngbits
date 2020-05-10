@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { NgbitIndeterminateBarModule } from '../ngbit-indeterminate-bar/ngbit-indeterminate-bar.module';
 import { NgbitBarBlocknloadComponent } from './ngbit-bar-blocknload/ngbit-bar-blocknload.component';
-import { NgbitFullscreenBlocknloadComponent } from './ngbit-fullscreen-blocknload/ngbit-fullscreen-blocknload.component';
 import { CommonModule } from '@angular/common';
-import { NgbitCustomBlocknloadComponent } from './ngbit-custom-blocknload.component';
+import { NgbitOverlayBlocknloadComponent } from './ngbit-overlay-blocknload.component';
+import { NgbitIndicatorsModule } from '../ngbit-indicators/ngbit-indicators.module';
 
 const assets = [
     NgbitBarBlocknloadComponent,
-    NgbitFullscreenBlocknloadComponent,
-    NgbitCustomBlocknloadComponent
+    NgbitOverlayBlocknloadComponent
 ];
 
 @NgModule({
     imports: [
         CommonModule,
+        NgbitIndicatorsModule,
         NgbitIndeterminateBarModule
     ],
     declarations: assets,

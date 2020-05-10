@@ -7,7 +7,7 @@ import { Component, ApplicationRef, ComponentRef } from '@angular/core';
 })
 export class NgbitBarBlocknloadComponent {
     position: 'top' | 'bottom' = 'top';
-    background: string;
+    backgroundColor: string;
     color: string;
     height = '4px';
     bsStyle: 'primary' | 'secondary' | 'info' | 'danger' | 'warning' | 'success' = null;

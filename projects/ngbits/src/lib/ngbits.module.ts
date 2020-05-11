@@ -5,16 +5,20 @@ import { NgbitLoadingButtonModule } from './ngbit-loading-button/ngbit-loading-b
 import { NgbitDropzoneModule } from './ngbit-dropzone/ngbit-dropzone.module';
 import { NgbitIndeterminateBarModule } from './ngbit-indeterminate-bar/ngbit-indeterminate-bar.module';
 import { NgbitPrettyFileInputModule } from './ngbit-pretty-file-input/ngbit-pretty-file-input.module';
+import { NgbitIndicatorsModule } from './ngbit-indicators/ngbit-indicators.module';
+import { NgbitBlocknloadModule } from './ngbit-blocknload/ngbit-blocknload.module';
 
 @NgModule({
   declarations: [],
   imports: [
     NgbitFlashModule,
+    NgbitIndicatorsModule,
     NgbitIndicatorButtonModule,
     NgbitLoadingButtonModule,
     NgbitDropzoneModule,
     NgbitIndeterminateBarModule,
-    NgbitPrettyFileInputModule
+    NgbitPrettyFileInputModule,
+    NgbitBlocknloadModule
   ],
   exports: []
 })

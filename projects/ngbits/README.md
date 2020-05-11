@@ -1,6 +1,6 @@
 # Ngbits
 
-Small bits of Angular for everyday use. This project contains a number of small libraries with more to be added over time. It is not yet another feature complete components library but instead aims to add additional features rarely found in frontend libraries out of the box.
+Small bits of Angular for everyday use. This project contains a number of small libraries with more to be added over time. It is not another feature complete components library but instead aims to add additional features rarely found in frontend libraries out of the box.
 
 ## Getting started
 

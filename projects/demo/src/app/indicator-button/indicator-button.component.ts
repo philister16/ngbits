@@ -22,7 +22,8 @@ export class IndicatorButtonComponent {
     position: 'start',
     btnClass: 'btn btn-primary',
     btnType: 'button',
-    speed: 'medium'
+    speed: 'medium',
+    disabled: false
   };
   api = [
     ['Input', 'Default', 'Description'],
@@ -30,7 +31,13 @@ export class IndicatorButtonComponent {
     ['position: "start | "end', 'start', 'Whether to show the loading indicator before or after the button text.'],
     ['btnType: "button | "submit"', 'button', 'The type of the button.'],
     ['speed: "fast" | "medium" | "slow"', 'medium', 'Speed of the animation of the loading indicator.'],
-    ['btnClass: string', '', 'One or more css classes to style the button.']
+    ['btnClass: string', '', 'One or more css classes to style the button.'],
+    ['disabled: boolean', 'false', 'Toggle disabled state of button.']
+  ];
+
+  api2 = [
+    ['Output', 'Description'],
+    ['btnClick: MouseEvent', 'A wrapper of the native click event on the button.']
   ];
 
   get example() {
@@ -41,7 +48,8 @@ export class IndicatorButtonComponent {
       btnType="${this.config.btnType}"
       speed="${this.config.speed}"
       btnClass="${this.config.btnClass}"
-      (click)="handelClick()">
+      disabled="${this.config.disabled}"
+      (btnClick)="handelClick()">
       Notch indicator button
     </ngbit-notch-indicator-button>
     `;
@@ -50,39 +58,39 @@ export class IndicatorButtonComponent {
   get example2() {
     return `
     <ngbit-eclipse-indicator-button [loader]="eclipse" btnClass="btn btn-primary mr-2 mb-2"
-        (click)="eclipse = !eclipse">
+        (btnClick)="eclipse = !eclipse">
         Eclipse button
     </ngbit-eclipse-indicator-button>
 
-    <ngbit-bottle-indicator-button [loader]="bottle" btnClass="btn btn-primary mr-2 mb-2" (click)="bottle = !bottle">
+    <ngbit-bottle-indicator-button [loader]="bottle" btnClass="btn btn-primary mr-2 mb-2" (btnClick)="bottle = !bottle">
         Bottle button
     </ngbit-bottle-indicator-button>
 
-    <ngbit-arrow-indicator-button [loader]="arrow" btnClass="btn btn-primary mr-2 mb-2" (click)="arrow = !arrow">
+    <ngbit-arrow-indicator-button [loader]="arrow" btnClass="btn btn-primary mr-2 mb-2" (btnClick)="arrow = !arrow">
         Arrow button
     </ngbit-arrow-indicator-button>
 
-    <ngbit-pulse-indicator-button [loader]="pulse" btnClass="btn btn-primary mr-2 mb-2" (click)="pulse = !pulse">
+    <ngbit-pulse-indicator-button [loader]="pulse" btnClass="btn btn-primary mr-2 mb-2" (btnClick)="pulse = !pulse">
         Pulse button
     </ngbit-pulse-indicator-button>
 
-    <ngbit-circle-indicator-button [loader]="circle" btnClass="btn btn-primary mr-2 mb-2" (click)="circle = !circle">
+    <ngbit-circle-indicator-button [loader]="circle" btnClass="btn btn-primary mr-2 mb-2" (btnClick)="circle = !circle">
         Circle button
     </ngbit-circle-indicator-button>
 
-    <ngbit-ripple-indicator-button [loader]="ripple" btnClass="btn btn-primary mr-2 mb-2" (click)="ripple = !ripple">
+    <ngbit-ripple-indicator-button [loader]="ripple" btnClass="btn btn-primary mr-2 mb-2" (btnClick)="ripple = !ripple">
         Ripple button
     </ngbit-ripple-indicator-button>
 
-    <ngbit-cube-indicator-button [loader]="cube" btnClass="btn btn-primary mr-2 mb-2" (click)="cube = !cube">
+    <ngbit-cube-indicator-button [loader]="cube" btnClass="btn btn-primary mr-2 mb-2" (btnClick)="cube = !cube">
         Cube button
     </ngbit-cube-indicator-button>
 
-    <ngbit-dots-indicator-button [loader]="dots" btnClass="btn btn-primary mr-2 mb-2" (click)="dots = !dots">
+    <ngbit-dots-indicator-button [loader]="dots" btnClass="btn btn-primary mr-2 mb-2" (btnClick)="dots = !dots">
         Dots button
     </ngbit-dots-indicator-button>
 
-    <ngbit-grid-indicator-button [loader]="grid" btnClass="btn btn-primary mr-2 mb-2" (click)="grid = !grid">
+    <ngbit-grid-indicator-button [loader]="grid" btnClass="btn btn-primary mr-2 mb-2" (btnClick)="grid = !grid">
         Grid button
     </ngbit-grid-indicator-button>
     `;

@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbitBaseIndicatorButtonComponent } from './ngbit-base-indicator-button.component';
 
 @Component({
     selector: 'ngbit-notch-indicator-button',
     template: `
-        <button [class]="btnClass" [type]="btnType">
+        <button [ngClass]="{ 'cursor': disabled }" [class]="btnClass" [type]="btnType" [disabled]="disabled" (click)="onClick($event)">
             <span *ngIf="loader && position === 'start'">
                 <ngbit-notch-indicator [speed]="speed"></ngbit-notch-indicator>
             </span>
@@ -20,6 +20,9 @@ import { NgbitBaseIndicatorButtonComponent } from './ngbit-base-indicator-button
         `
         .text {
             margin: 0 0.125em;
+        }
+        .cursor {
+            cursor: auto;
         }
         `
     ]

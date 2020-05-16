@@ -4,7 +4,7 @@ import { NgbitBaseIndicatorButtonComponent } from './ngbit-base-indicator-button
 @Component({
     selector: 'ngbit-pulse-indicator-button',
     template: `
-        <button [class]="btnClass" [type]="btnType">
+        <button [ngClass]="{ 'cursor': disabled }" [class]="btnClass" [type]="btnType" [disabled]="disabled" (click)="onClick($event)">
             <span *ngIf="loader && position === 'start'">
                 <ngbit-pulse-indicator [speed]="speed"></ngbit-pulse-indicator>
             </span>
@@ -20,6 +20,9 @@ import { NgbitBaseIndicatorButtonComponent } from './ngbit-base-indicator-button
         `
             .text {
                 margin: 0 0.125em;
+            }
+            .cursor {
+                cursor: auto;
             }
         `
     ]

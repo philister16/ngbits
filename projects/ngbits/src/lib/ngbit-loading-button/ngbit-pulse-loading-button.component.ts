@@ -4,7 +4,8 @@ import { NgbitBaseLoadingButtonComponent } from './ngbit-base-loading-button.com
 @Component({
   selector: 'ngbit-pulse-loading-button',
   template: `
-    <button #btn [class]="btnClass" [type]="btnType" [style.width]="dimensions?.width + 'px'" [style.height]="dimensions?.height + 'px'">
+    <button #btn [ngClass]="{ 'cursor': disabled }" [disabled]="disabled" (click)="onClick($event)"
+    [class]="btnClass" [type]="btnType" [style.width]="dimensions?.width + 'px'" [style.height]="dimensions?.height + 'px'">
     <span *ngIf="!loader" class="text">
       <ng-content></ng-content>
     </span>
@@ -19,6 +20,9 @@ import { NgbitBaseLoadingButtonComponent } from './ngbit-base-loading-button.com
 
       .text {
         white-space: nowrap;
+      }
+      .cursor {
+        cursor: auto;
       }
     `
   ]

@@ -3,20 +3,20 @@
     size.</p>
 <section class="py-3">
     <h3>Examples</h3>
-    <div class="row">
-        <div class="col-md-3">
+    <div class="row form-row">
+        <div class="col-md-2">
             <div class="form-group">
                 <label>Loader</label>
                 <input type="text" class="form-control" readonly [(ngModel)]="config.loader">
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="form-group">
                 <label>Button class</label>
                 <input type="text" class="form-control" [(ngModel)]="config.btnClass">
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="form-group">
                 <label>Button type</label>
                 <select class="custom-select" [(ngModel)]="config.btnType">
@@ -25,7 +25,7 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="form-group">
                 <label>Speed</label>
                 <select class="custom-select" [(ngModel)]="config.speed">
@@ -35,9 +35,18 @@
                 </select>
             </div>
         </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Disabled</label>
+                <select class="custom-select" [(ngModel)]="config.disabled">
+                    <option [ngValue]="false">False</option>
+                    <option [ngValue]="true">True</option>
+                </select>
+            </div>
+        </div>
     </div>
     <ngbit-dots-loading-button [loader]="this.config.loader" [btnClass]="config.btnClass" [btnType]="config.btnType"
-        [speed]="config.speed" (click)="this.config.loader = !this.config.loader">
+        [speed]="config.speed" (btnClick)="this.config.loader = !this.config.loader" [disabled]="config.disabled">
         Click to load
     </ngbit-dots-loading-button>
     <pre class="my-3"><code [highlight]="example" [languages]="['html']"></code></pre>
@@ -47,39 +56,39 @@
         libraries.
     </p>
     <ngbit-notch-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="notchLoader"
-        (click)="notchLoader = !notchLoader">
+        (btnClick)="notchLoader = !notchLoader">
         Notch loading
     </ngbit-notch-loading-button>
     <ngbit-eclipse-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="eclipseLoader"
-        (click)="eclipseLoader = !eclipseLoader">
+        (btnClick)="eclipseLoader = !eclipseLoader">
         Eclipse loading
     </ngbit-eclipse-loading-button>
     <ngbit-bottle-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="bottleLoader"
-        (click)="bottleLoader = !bottleLoader">
+        (btnClick)="bottleLoader = !bottleLoader">
         Bottle loading
     </ngbit-bottle-loading-button>
     <ngbit-arrow-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="arrowLoader"
-        (click)="arrowLoader = !arrowLoader">
+        (btnClick)="arrowLoader = !arrowLoader">
         Arrow loading
     </ngbit-arrow-loading-button>
     <ngbit-pulse-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="pulseLoader"
-        (click)="pulseLoader = !pulseLoader">
+        (btnClick)="pulseLoader = !pulseLoader">
         Pulse loading
     </ngbit-pulse-loading-button>
     <ngbit-circle-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="circleLoader"
-        (click)="circleLoader = !circleLoader">
+        (btnClick)="circleLoader = !circleLoader">
         Circle loading
     </ngbit-circle-loading-button>
     <ngbit-ripple-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="rippleLoader"
-        (click)="rippleLoader = !rippleLoader">
+        (btnClick)="rippleLoader = !rippleLoader">
         Ripple loading
     </ngbit-ripple-loading-button>
     <ngbit-cube-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="cubeLoader"
-        (click)="cubeLoader = !cubeLoader">
+        (btnClick)="cubeLoader = !cubeLoader">
         Cube loading
     </ngbit-cube-loading-button>
     <ngbit-grid-loading-button btnClass="btn btn-primary mr-2 mb-2" [loader]="gridLoader"
-        (click)="gridLoader = !gridLoader">
+        (btnClick)="gridLoader = !gridLoader">
         Load with grid</ngbit-grid-loading-button>
     <pre class="my-3"><code [highlight]="example2" [languages]="['html']"></code></pre>
 </section>
@@ -91,4 +100,5 @@
     <p>Replace [variant] with any of the 10: 'Dots', 'Notch', 'Eclipse', 'Bottle', 'Arrow', 'Pulse', 'Circle', 'Ripple',
         'Cube' or 'Grid'.</p>
     <app-api-table [tableValues]="api"></app-api-table>
+    <app-api-table [tableValues]="api2"></app-api-table>
 </section>

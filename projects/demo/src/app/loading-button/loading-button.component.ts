@@ -10,7 +10,8 @@ export class LoadingButtonComponent implements OnInit {
     loader: false,
     btnClass: 'btn btn-primary',
     btnType: 'button',
-    speed: 'medium'
+    speed: 'medium',
+    disabled: false
   };
   notchLoader = false;
   eclipseLoader = false;
@@ -26,7 +27,12 @@ export class LoadingButtonComponent implements OnInit {
     ['loader: boolean', 'false', 'Shows loader if true.'],
     ['btnClass: string', '', 'A string of CSS classes to style the button.'],
     ['btnType: "button" | "submit"', 'button', 'If the button is a submit type or not.'],
-    ['speed: "slow" | "medium" | "fast"', 'medium', 'The speed of the indicator animation.']
+    ['speed: "slow" | "medium" | "fast"', 'medium', 'The speed of the indicator animation.'],
+    ['disabled: boolean', 'false', 'Toggles the disabled state of the button.']
+  ];
+  api2 = [
+    ['Output', 'Description'],
+    ['btnClick: MouseEvent', 'A wrapper of the native click event on the button.']
   ];
 
   constructor() { }
@@ -42,7 +48,8 @@ export class LoadingButtonComponent implements OnInit {
       btnClass="${this.config.btnClass}"
       btnType="${this.config.btnType}"
       speed="${this.config.speed}"
-      (click)="handleClick()">
+      disabled="${this.config.disabled}"
+      (btnClick)="handleClick()">
         Click to load
     </ngbit-dots-loading-button>
     `;
@@ -51,39 +58,39 @@ export class LoadingButtonComponent implements OnInit {
   get example2() {
     return `
     <ngbit-notch-loading-button [loader]="notchLoader"
-        (click)="notchLoader = !notchLoader">
+        (btnClick)="notchLoader = !notchLoader">
         Notch loading
     </ngbit-notch-loading-button>
     <ngbit-eclipse-loading-button [loader]="eclipseLoader"
-        (click)="eclipseLoader = !eclipseLoader">
+        (btnClick)="eclipseLoader = !eclipseLoader">
         Eclipse loading
     </ngbit-eclipse-loading-button>
     <ngbit-bottle-loading-button [loader]="bottleLoader"
-        (click)="bottleLoader = !bottleLoader">
+        (btnClick)="bottleLoader = !bottleLoader">
         Bottle loading
     </ngbit-bottle-loading-button>
     <ngbit-arrow-loading-button [loader]="arrowLoader"
-        (click)="arrowLoader = !arrowLoader">
+        (btnClick)="arrowLoader = !arrowLoader">
         Arrow loading
     </ngbit-arrow-loading-button>
     <ngbit-pulse-loading-button [loader]="pulseLoader"
-        (click)="pulseLoader = !pulseLoader">
+        (btnClick)="pulseLoader = !pulseLoader">
         Pulse loading
     </ngbit-pulse-loading-button>
     <ngbit-circle-loading-button [loader]="circleLoader"
-        (click)="circleLoader = !circleLoader">
+        (btnClick)="circleLoader = !circleLoader">
         Circle loading
     </ngbit-circle-loading-button>
     <ngbit-ripple-loading-button [loader]="rippleLoader"
-        (click)="rippleLoader = !rippleLoader">
+        (btnClick)="rippleLoader = !rippleLoader">
         Ripple loading
     </ngbit-ripple-loading-button>
     <ngbit-cube-loading-button [loader]="cubeLoader"
-        (click)="cubeLoader = !cubeLoader">
+        (btnClick)="cubeLoader = !cubeLoader">
         Cube loading
     </ngbit-cube-loading-button>
     <ngbit-grid-loading-button [loader]="gridLoader"
-        (click)="gridLoader = !gridLoader">
+        (btnClick)="gridLoader = !gridLoader">
         Load with grid
     </ngbit-grid-loading-button>
     `;
